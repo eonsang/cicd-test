@@ -64,5 +64,5 @@ jobs:
         run: |
           echo $REGISTRY;
           echo $REGISTRY/$REPOSITORY:$IMAGE_TAG;
-          docker buildx build --platform=linux/amd64 -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
